@@ -6,19 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/7821b34248.js" crossorigin="anonymous"></script>
     </head>
     <body>
       <div id="header">
         <div class="container">
             <nav>
                 <img src="images/logo.png"class='logo'>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>WEB/ANDROID APP DEVELOPER</p>
@@ -31,25 +34,38 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/user pic.png">
+                    <img src="images/user-pic.png">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Nulla tincidunt blandit aliquet. In hac habitasse platea dictumst. 
-                        Suspendisse eu diam nibh. Aliquam erat volutpat. 
-                        Donec purus libero, consequat ut aliquet sit amet, dignissim et dui. 
-                        Maecenas sed venenatis nisi. Pellentesque pulvinar metus sit amet varius convallis.</p>
+                    <p>Hello, I'm Jomari Divinagracia, currently a 3rd year student of Bachelor of Science in Computer Science in PASS COLLEGE.
+                    </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('dummy')">asdn</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>UI/UX</span><br>Designing Web/Android App Interface</li>
                             <li><span>Web Development</span><br>Web App Development</li>
                             <li><span>Android App Development</span><br>Building Android Apps using Flutter(Dart)Language</li>
                         </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Elementary</span><br>Palamis Elementary School</li>
+                            <li><span>Junior and Senior High</span><br>Colegio San Jose de Alaminos</li>
+                            <li><span>Tertiary</span><br>Philippine Accountancy and Science School - Bachelor of Science in Computer Science</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="dummy">
+                        <ul>
+                            <li><span>Elementary</span><br>Palamis Elementary School</li>
+                            <li><span>Junior and Senior High</span><br>Colegio San Jose de Alaminos</li>
+                            <li><span>Tertiary</span><br>Philippine Accountancy and Science School - Bachelor of Science in Computer Science</li>
+                        </ul>
+                    </div>
                     </div>
                 </div>
                 
@@ -57,5 +73,151 @@
         </div>
       </div>
 
-    </body>
+<!------------------------------------------------------------service------------------------------------------------------------------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="service-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>adsagrgaslkgjagoahshdfga</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-android"></i>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Development</h2>
+                <p>adsagrgaslkgjasdglakhsfdgalsoyhdfga</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX</h2>
+                <p>adsagrgasga</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------------------------------------------------------------------portfolio------------------------------------------------------>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Portfolio</h1>
+        <div class="port-list">
+            <div class="port">
+                <img src="images/app1.png">
+                <div class="layer">
+                    <h3>Filipino Cuisinero</h3>
+                    <p>Filipino Cuisine Cookbook for everyone.
+                        You can view the Source Code on Github.
+                    </p>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="port">
+                <img src="images/app2.png">
+                <div class="layer">
+                    <h3>Filipino Cuisinero</h3>
+                    <p>Filipino Cuisine Cookbook for everyone.
+                        You can view the Source Code on Github.
+                    </p>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="port">
+                <img src="images/app3.png">
+                <div class="layer">
+                    <h3>Filipino Cuisinero</h3>
+                    <p>Filipino Cuisine Cookbook for everyone.
+                        You can view the Source Code on Github.
+                    </p>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!----------------------------------------------------------------------------contact--------------------------------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>example@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>123456789</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-telegram"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <a href="cv/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name = "Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="copyright">
+        <p>
+            Copyright © Jomari. 2024<i class="fa-solid fa-heart"></i>
+        </p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links"); 
+    var tabcontents = document.getElementsByClassName("tab-contents"); 
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
+<script>
+    var sidemen = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwbkmYmZ_kTINYhhbQlpLuQ3c3bgC_79f2vW2aH9crna4QP3Mg9Qa2hyVywAd_JIUhO/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML = "Message sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
 </html>
